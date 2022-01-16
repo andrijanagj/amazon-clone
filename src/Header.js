@@ -20,8 +20,7 @@ function Header() {
             <Link to='/'> 
             <img className="header_logo" src='https://pngimg.com/uploads/amazon/amazon_PNG25.png' />
             </Link>
-           
-            
+    
             <div className="header_search">
                 <input className="header_searchInput" />
                 <SearchIcon className="header__searchIcon"></SearchIcon>
@@ -31,7 +30,7 @@ function Header() {
                 <Link to={!user && '/login'}>
                       <div onClick={handleAuthentication} className="header__option">
                     <span className="header__optionLineOne">
-                       Hello,{user.email}
+                       Hello,{user?.email}
                     </span>
                     <span className="header__optionLineTwo">
                        {user ? 'Sign Out' : 'Sign In'}
